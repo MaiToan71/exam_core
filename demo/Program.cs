@@ -50,7 +50,7 @@ namespace demo
             }
             else if ("5".Equals(input))
             {
-                // chucnang5(allPosts);
+                Chucnang5(allPosts);
             }
             else
             {
@@ -103,7 +103,8 @@ namespace demo
         }
         private static void Chucnang2(List<Post> allPosts)
         {
-            if (allPosts.Count() == 0) {
+            if (allPosts.Count() == 0)
+            {
                 Console.WriteLine("Nhap lai chuc nang 1:");
             }
             else
@@ -131,11 +132,31 @@ namespace demo
                         Age = Age
                     };
                     allPosts.Add(post);
-                    
+
                 }
-                
+
             }
-           
+
+        }
+        private static void Chucnang5(List<Post> allPosts)
+        {
+            if (allPosts.Count() == 0)
+            {
+                Console.WriteLine("Nhap  lai chuc nang 1");
+            }
+            else
+            {
+                Console.WriteLine("Thong tin");
+                Console.Write("ID: ");
+                String Id = Console.ReadLine();
+                foreach (var p in allPosts)
+                {
+                    Console.WriteLine("ID" + p.ID);
+                    Console.WriteLine("Departmant" + p.Departmant);
+                }
+            }
+            
+            
         }
     }
     
